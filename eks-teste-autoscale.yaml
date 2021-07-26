@@ -7,7 +7,8 @@ metadata:
 
 nodeGroups:
   - name: scale-east1c
-    instanceType: t2.small    desiredCapacity: 1
+    instanceType: t2.small
+    desiredCapacity: 1
     maxSize: 10
     availabilityZones: ["us-east-1c"]
     iam:
