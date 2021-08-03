@@ -12,16 +12,10 @@ https://docs.aws.amazon.com/pt_br/eks/latest/userguide/eksctl.html
 KUBECTL
 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/	
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Criar um kubeconfig Amazon EKS
 https://docs.aws.amazon.com/pt_br/eks/latest/userguide/create-kubeconfig.html
 
-# kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
-
-# kubectl -n kube-system annotate deployment.apps/cluster-autoscaler cluster-autoscaler.kubernetes.io/safe-to-evict="false"
-
-# kubectl -n kube-system edit deployment.apps/cluster-autoscaler		-> 	altere o nome do cluster e versão
 -----Comandos-------
 
 # eksctl get cluster	
@@ -35,3 +29,9 @@ https://docs.aws.amazon.com/pt_br/eks/latest/userguide/create-kubeconfig.html
 #  kubectl -n kube-system describe deployment cluster-autoscaler
 
 # eksctl create cluster 'eks-teste.yaml --zones us-east-1a,us-east-1b,us-east-1c
+
+# kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
+
+# kubectl -n kube-system annotate deployment.apps/cluster-autoscaler cluster-autoscaler.kubernetes.io/safe-to-evict="false"
+
+# kubectl -n kube-system edit deployment.apps/cluster-autoscaler		-> 	altere o nome do cluster e versão
