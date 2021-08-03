@@ -17,6 +17,7 @@ Criar um kubeconfig Amazon EKS
 https://docs.aws.amazon.com/pt_br/eks/latest/userguide/create-kubeconfig.html
 
 -----Comandos-------
+
 kubectl get pods
 
 eksctl get cluster	
