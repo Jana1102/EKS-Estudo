@@ -55,7 +55,7 @@ kubectl -n kube-system logs deployment.apps/cluster-autoscaler
 add policy to your nodegroup(s)
 add policy *CloudWatchAgentServerPolicy* to nodegroup(s) role
 
-# deploy the cloudwatch agent
+deploy the cloudwatch agent
 curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/master/k8s-yaml-templates/quickstart/cwagent-fluentd-quickstart.yaml | sed "s/{{cluster_name}}/teste-cluster/;s/{{region_name}}/us-east-1/" | kubectl apply -f -
 
 Listar 
