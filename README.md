@@ -17,6 +17,7 @@ Criar um kubeconfig Amazon EKS
 https://docs.aws.amazon.com/pt_br/eks/latest/userguide/create-kubeconfig.html
 
 -----Comandos-------
+
 Listar pods
 kubectl get pods
 
@@ -35,9 +36,6 @@ eksctl delete cluster -f eks-teste.yaml
 Mostrar detalhes do cluster-autoscaler, namespace kube-system.
 kubectl -n kube-system describe deployment cluster-autoscaler
 
-Implantar o autoescalador
-kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
-
 coloque a anotação necessária para a implantação
 kubectl -n kube-system annotate deployment.apps/cluster-autoscaler cluster-autoscaler.kubernetes.io/safe-to-evict="false"
 
@@ -51,6 +49,10 @@ Logs do autoscaler
 kubectl -n kube-system logs deployment.apps/cluster-autoscaler
 
 kubectl get pods -o wide --watch
+
+# Implantar o autoescalador
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
+
 
 # estudo-01.yaml
  Criando o cluster
