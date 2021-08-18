@@ -64,7 +64,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/
 # estudo-01.yaml
  Criando o cluster	->	eksctl cluster -f eks-teste.yaml
 
-Cloudwatch logging of an EKS cluster via yaml config file ->	eksctl utils update-cluster-logging --config-file eks-course.yaml --approve
+Cloudwatch logging of an EKS cluster via yaml config file ->	eksctl utils update-cluster-logging --config-file estudo-01.yaml --approve
 
 Add policy to your nodegroup(s). Add policy *CloudWatchAgentServerPolicy* to nodegroup(s) role.
 
