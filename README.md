@@ -77,4 +77,20 @@ Listar amazon-cloudwatch ->	kubectl get all -n amazon-cloudwatch
 
 O autoescalador de cluster inicia automaticamente nós de trabalho adicionais se mais recursos forem necessários e desligará nós de trabalho se eles forem subutilizados. O escalonamento automático funciona dentro de um grupo de nós, portanto, crie primeiro um grupo de nós que tenha esse recurso habilitado.
 
-## criar grupo de nós com autoescalador habilitado
+criar grupo de nós com autoescalador habilitado
+
+eksctl create nodegroup --config-file=estudo-2.yaml
+
+eksctl delete nodegroup --cluster=EKS-course-cluster --name=ng-1 --approve
+
+Deploy do autoscaler	->	kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
+
+Coloque a anotação necessária para a implantação	->	kubectl -n kube-system annotate deployment.apps/cluster-autoscaler cluster-autoscaler.kubernetes.io/safe-to-evict="false"
+
+Edite a implantação e defina o nome do cluster EKS	->	kubectl -n kube-system edit deployment.apps/cluster-autoscaler
+
+defina a versão da imagem na propriedade 'image = k8s.gcr.io / cluster-autoscaler: vx.yy.z'
+* defina o nome do cluster EKS no final da propriedade '- --node-group-auto-discovery = asg: tag = k8s.io / cluster-autoscaler / enabled, k8s.io / cluster-autoscaler / << EKS nome do cluster >>'
+
+Listar os registros do autoescalador de cluster	->	kubectl -n kube-system logs deployment.apps/cluster-autoscaler
+
