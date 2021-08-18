@@ -55,6 +55,8 @@ Logs do autoscaler
 
 kubectl -n kube-system logs deployment.apps/cluster-autoscaler
 
+Verificando pods
+
 kubectl get pods -o wide --watch
 
 # Implantar o autoescalador
@@ -93,4 +95,13 @@ defina o nome do cluster EKS no final da propriedade '- --node-group-auto-discov
 Listar os registros do autoescalador de cluster		->	kubectl -n kube-system logs deployment.apps/cluster-autoscaler
 
 #  estudo-nginx-deployment.yaml
+Deployment nginx	->	kubectl apply -f nginx-deployment.yaml
+Dimensionar a implantação	->	kubectl scale --replicas=3 deployment/test-autoscaler
+
+Ver os registros do autoescalador de cluster
+
+kubectl -n kube-system logs deployment.apps/cluster-autoscaler | grep -A5 "Expanding Node Group"
+
+kubectl -n kube-system logs deployment.apps/cluster-autoscaler | grep -A5 "removing node"
+
 
