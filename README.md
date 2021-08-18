@@ -28,6 +28,7 @@ Listar Nodes
 kubectl get nodes
 
 Listar nodegroup
+
 eksctl get nodegroup --cluster teste-cluster
 
 Deletar cluster
