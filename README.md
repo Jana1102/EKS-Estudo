@@ -36,6 +36,7 @@ Deletar cluster
 eksctl delete cluster -f eks-teste.yaml
 
 Mostrar detalhes do cluster-autoscaler, namespace kube-system.
+
 kubectl -n kube-system describe deployment cluster-autoscaler
 
 coloque a anotação necessária para a implantação
