@@ -73,3 +73,8 @@ Deploy the cloudwatch agent	->	curl https://raw.githubusercontent.com/aws-sample
 Listar amazon-cloudwatch ->	kubectl get all -n amazon-cloudwatch
 
 # estudo-02.yaml
+## Ativar autoescalador de cluster
+
+O autoescalador de cluster inicia automaticamente nós de trabalho adicionais se mais recursos forem necessários e desligará nós de trabalho se eles forem subutilizados. O escalonamento automático funciona dentro de um grupo de nós, portanto, crie primeiro um grupo de nós que tenha esse recurso habilitado.
+
+## criar grupo de nós com autoescalador habilitado
