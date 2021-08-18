@@ -59,6 +59,22 @@ Verificando pods
 
 kubectl get pods -o wide --watch
 
+* Config Map
+
+Criando arquivo config map e acresentando a credencial k8s-teste	->	kubectl -n kube-system get configmap aws-auth -o yaml > aws-auth-configmap.ymal
+
+Executando config map	->	kubectl apply -f aws-auth-configmap.ymal -n kube-system
+
+Listando informações do aws-auth	->	kubectl -n kube-system describe cm aws-auth  
+
+Listando aws-auth	->	kubectl -n kube-system get cm aws-auth  
+
+Verificando qual credencial está sendo usada	->	aws sts get-caller-identity
+
+Setando a credencial k8s-teste	->	export AWS_PROFILE="k8s-teste"
+
+Criando namespace	->	kubectl create namespace production
+
 # Implantar o autoescalador
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/cluster-autoscaler/cloudprovider/aws/examples/cluster-autoscaler-autodiscover.yaml
 
