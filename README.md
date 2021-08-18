@@ -1,4 +1,4 @@
-# kubernetes
+# EKS
 ----Download Pré requisito na EC2---
 
 AWS CLI
