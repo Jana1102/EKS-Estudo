@@ -59,7 +59,7 @@ Verificando pods
 
 kubectl get pods -o wide --watch
 
-* Config Map
+#Config Map
 
 Criando arquivo config map e acresentando a credencial k8s-teste	->	kubectl -n kube-system get configmap aws-auth -o yaml > aws-auth-configmap.ymal
 
