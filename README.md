@@ -88,7 +88,9 @@ Coloque a anotação necessária para a implantação	->	kubectl -n kube-system 
 Edite a implantação e defina o nome do cluster EKS	->	kubectl -n kube-system edit deployment.apps/cluster-autoscaler
 
 defina a versão da imagem na propriedade 'image = k8s.gcr.io / cluster-autoscaler: vx.yy.z'
-* defina o nome do cluster EKS no final da propriedade '- --node-group-auto-discovery = asg: tag = k8s.io / cluster-autoscaler / enabled, k8s.io / cluster-autoscaler / << EKS nome do cluster >>'
+defina o nome do cluster EKS no final da propriedade '- --node-group-auto-discovery = asg: tag = k8s.io / cluster-autoscaler / enabled, k8s.io / cluster-autoscaler / << EKS nome do cluster >>'
 
-Listar os registros do autoescalador de cluster	->	kubectl -n kube-system logs deployment.apps/cluster-autoscaler
+Listar os registros do autoescalador de cluster		->	kubectl -n kube-system logs deployment.apps/cluster-autoscaler
+
+#  estudo-nginx-deployment.yaml
 
