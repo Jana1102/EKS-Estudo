@@ -59,6 +59,7 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/
  eksctl cluster -f eks-teste.yaml
 
  Cloudwatch logging of an EKS cluster via yaml config file
+ 
  eksctl utils update-cluster-logging --config-file eks-course.yaml --approve
 
 add policy to your nodegroup(s)
