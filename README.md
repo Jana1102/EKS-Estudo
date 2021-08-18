@@ -39,16 +39,20 @@ Mostrar detalhes do cluster-autoscaler, namespace kube-system.
 
 kubectl -n kube-system describe deployment cluster-autoscaler
 
-coloque a anotação necessária para a implantação
+Coloque a anotação
+
 kubectl -n kube-system annotate deployment.apps/cluster-autoscaler cluster-autoscaler.kubernetes.io/safe-to-evict="false"
 
 Edite a implantação e defina o nome do cluster
+
 kubectl -n kube-system edit deployment.apps/cluster-autoscaler
 
 Dimensionar a implantação
+
 kubectl scale --replicas=3 deployment/test-autoscaler
 
 Logs do autoscaler
+
 kubectl -n kube-system logs deployment.apps/cluster-autoscaler
 
 kubectl get pods -o wide --watch
