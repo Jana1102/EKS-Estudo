@@ -62,18 +62,14 @@ kubectl apply -f https://raw.githubusercontent.com/kubernetes/autoscaler/master/
 
 
 # estudo-01.yaml
- Criando o cluster
- eksctl cluster -f eks-teste.yaml
+ Criando o cluster	->	eksctl cluster -f eks-teste.yaml
 
- Cloudwatch logging of an EKS cluster via yaml config file
- 
- eksctl utils update-cluster-logging --config-file eks-course.yaml --approve
+Cloudwatch logging of an EKS cluster via yaml config file ->	eksctl utils update-cluster-logging --config-file eks-course.yaml --approve
 
-add policy to your nodegroup(s)
-add policy *CloudWatchAgentServerPolicy* to nodegroup(s) role
+Add policy to your nodegroup(s). Add policy *CloudWatchAgentServerPolicy* to nodegroup(s) role.
 
-deploy the cloudwatch agent
-curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/master/k8s-yaml-templates/quickstart/cwagent-fluentd-quickstart.yaml | sed "s/{{cluster_name}}/teste-cluster/;s/{{region_name}}/us-east-1/" | kubectl apply -f -
+Deploy the cloudwatch agent	->	curl https://raw.githubusercontent.com/aws-samples/amazon-cloudwatch-container-insights/master/k8s-yaml-templates/quickstart/cwagent-fluentd-quickstart.yaml | sed "s/{{cluster_name}}/teste-cluster/;s/{{region_name}}/us-east-1/" | kubectl apply -f -
 
-Listar 
-kubectl get all -n amazon-cloudwatch
+Listar amazon-cloudwatch ->	kubectl get all -n amazon-cloudwatch
+
+# estudo-02.yaml
