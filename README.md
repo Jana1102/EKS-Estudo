@@ -32,6 +32,7 @@ Listar nodegroup
 eksctl get nodegroup --cluster teste-cluster
 
 Deletar cluster
+
 eksctl delete cluster -f eks-teste.yaml
 
 Mostrar detalhes do cluster-autoscaler, namespace kube-system.
