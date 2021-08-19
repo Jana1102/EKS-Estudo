@@ -1,16 +1,20 @@
 # PVC
 
-*Listar todo os namespaces
-kubectl get pods --all-namespaces
+* Listar todo os namespaces
 
-*Criando namespace
-kubectl create namespace ns-k8s-teste
+        kubectl get pods --all-namespaces
 
-*Listando
-kubectl get storageclasses --namespace=ns-k8s-teste
+* Criando namespace
 
-*Deployment pvcs
-kubectl apply -f pvcs.yaml --namespace=ns-k8s-teste
+       kubectl create namespace ns-k8s-teste
+
+* Listando
+
+       kubectl get storageclasses --namespace=ns-k8s-teste
+
+* Deployment pvcs
+
+        kubectl apply -f pvcs.yaml --namespace=ns-k8s-teste
 
 * Se você receber o seguinte erro, significa que já existe uma classe de armazenamento gp2 disponível e você pode pular o comando acima:
 
@@ -18,14 +22,17 @@ kubectl apply -f pvcs.yaml --namespace=ns-k8s-teste
 >>    *parameters: Forbidden: updates to parameters are forbidden.*  
 >>    *reclaimPolicy: Forbidden: updates to reclaimPolicy are forbidden.*
 
-*Conjunto padrão:
-kubectl patch storageclass gp2 -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}' --namespace=ns-eks-course
+* Conjunto padrão:
 
-*Deploy do pvcs.yaml
-kubectl apply -f pvcs.yaml --namespace=ns-eks-course
+       kubectl patch storageclass gp2 -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}' --namespace=ns-eks-course
 
-Listando 
-kubectl get pvc --namespace=ns-k8s-teste
+* Deploy do pvcs.yaml
+
+        kubectl apply -f pvcs.yaml --namespace=ns-eks-course
+
+* Listando 
+  
+        kubectl get pvc --namespace=ns-k8s-teste
 
 # Secret
 Criando secret
