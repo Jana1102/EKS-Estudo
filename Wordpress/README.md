@@ -66,10 +66,3 @@
 >>    *Por natureza, um StatefulSet precisa de armazenamento persistente para que o aplicativo hospedado salve seu estado e dados nas reinicializações.*
 
         kubectl apply -f deploy-wordpress-by-statefulset.yaml --namespace=ns-k8s-teste
-
-
-# EFS
-Criar EFS.
-        
-        
-
