@@ -12,7 +12,7 @@
 
        kubectl get storageclasses --namespace=ns-k8s-teste
 
-* Deployment pvcs
+* Deployment pvcs.yaml
 
         kubectl apply -f pvcs.yaml --namespace=ns-k8s-teste
 
@@ -46,16 +46,30 @@
 
         kubectl get secret --namespace=ns-k8s-teste
 
-* Deployment Mysql
+# Deployment deploy-mysql.yaml
 
         kubectl apply -f deploy-mysql.yaml --namespace=ns-k8s-teste
 
         kubectl get pods -o wide --namespace=ns-k8s-teste
 
-* Deployment Wordpress
+# Deployment deploy-wordpress.yaml
 
         kubectl apply -f deploy-wordpress.yaml  --namespace=ns-k8s-teste
 
 
         kubectl get pvc --namespace=ns-k8s-teste
+        
+# Statefulset
+
+>>    *Um StatefulSet é outro controlador do Kubernetes que gerencia pods como as implantações.* 
+>>    *Mas é diferente de uma implantação porque é mais adequado para aplicativos com estado.* 
+>>    *Por natureza, um StatefulSet precisa de armazenamento persistente para que o aplicativo hospedado salve seu estado e dados nas reinicializações.*
+
+        kubectl apply -f deploy-wordpress-by-statefulset.yaml --namespace=ns-k8s-teste
+
+
+* EFS
+Criar EFS.
+        
+        
 
