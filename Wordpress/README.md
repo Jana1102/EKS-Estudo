@@ -59,7 +59,7 @@
 
         kubectl get pvc --namespace=ns-k8s-teste
         
-# Statefulset
+# Statefulset deploy-wordpress-by-statefulset.yaml
 
 >>    *Um StatefulSet é outro controlador do Kubernetes que gerencia pods como as implantações.* 
 >>    *Mas é diferente de uma implantação porque é mais adequado para aplicativos com estado.* 
@@ -68,7 +68,7 @@
         kubectl apply -f deploy-wordpress-by-statefulset.yaml --namespace=ns-k8s-teste
 
 
-* EFS
+# EFS
 Criar EFS.
         
         
