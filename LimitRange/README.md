@@ -3,7 +3,7 @@
 
 * Criando namespace que será limitado
 		
-    kubectl create namespace primeiro-namespace
+   		 kubectl create namespace primeiro-namespace
 
 * Criando limitando-recursos.yaml que fará a limitação dos recursos para o namespace primeiro-namespace
 
@@ -11,15 +11,15 @@
 
 * Listando
 	
-    kubectl describe limitranges --namespace=primeiro-namespace limitando-recursos
+    		kubectl describe limitranges --namespace=primeiro-namespace limitando-recursos
 
-* Criando pod-limitado.yaml que vai ser limitado devido está com namespace primeiro-namespace
+* Criando pod-limitado.yaml que vai ser limitado devido está com namespace primeiro-namespace. Tudo que tive com esse namespace terá seus recursos limitados.
 
 		kubectl apply -f pod-limitado.yaml --namespace=primeiro-namespace
 
 * Listando o pod que está usando limitRange
 
-    kubectl get pods --namespace=primeiro-namespace
+	    	kubectl get pods --namespace=primeiro-namespace
 
 
 
