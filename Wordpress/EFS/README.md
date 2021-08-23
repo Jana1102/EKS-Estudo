@@ -24,3 +24,6 @@ kubectl apply -f create-storage.yaml --namespace=ns-k8s-teste-efs
 
 # Deployment Mysql
 kubectl create secret generic mysql-pass --from-literal=password=eks-course-mysql-pw --namespace=ns-k8s-teste-efs
+
+# Wordpress
+kubectl apply -f deploy-wordpress.yaml --namespace=ns-k8s-teste-efs
