@@ -8,7 +8,6 @@
 * Criando limitando-recursos.yaml que fará a limitação dos recursos para o namespace primeiro-namespace
 
 		kubectl create -f limitando-recursos.yaml --namespace=primeiro-namespace
-
 * Listando
 	
     		kubectl describe limitranges --namespace=primeiro-namespace limitando-recursos
