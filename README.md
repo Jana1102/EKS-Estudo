@@ -16,7 +16,7 @@ https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
 Criar um kubeconfig Amazon EKS
 https://docs.aws.amazon.com/pt_br/eks/latest/userguide/create-kubeconfig.html
 
-* Comandos
+# Comandos
 
 Listar pods
 	
