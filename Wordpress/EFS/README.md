@@ -17,7 +17,7 @@ Deployment EFS create-efs-provisioner.yaml
     kubectl apply -f create-efs-provisioner.yaml --namespace=ns-k8s-teste-efs
 
 
-# RBAC reate-rbac.yaml
+# RBAC create-rbac.yaml
 
     kubectl apply -f create-rbac.yaml --namespace=ns-k8s-teste-efs
 
